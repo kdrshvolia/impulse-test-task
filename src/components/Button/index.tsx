@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { baseButtonStyle } from "./styles.ts";
+import { baseButtonStyle, contentButtonStyle } from "./styles.ts";
 import { css } from "../../css";
 
 interface ButtonProps {
@@ -8,6 +8,6 @@ interface ButtonProps {
 
 export const Button = ({ children }: ButtonProps) => (
   <button type="button" className={css(baseButtonStyle)}>
-    {children}
+    <span className={css(contentButtonStyle)}>{children}</span>
   </button>
 );
