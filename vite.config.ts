@@ -4,6 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/impulse-test-task/",
   plugins: [react(), svgr()],
 });
