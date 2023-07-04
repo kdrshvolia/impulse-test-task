@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider} from "react-router-dom";
 import { Global } from "@emotion/react";
 import { StartPage } from "./pages/start-page/startPage.tsx";
 import { ThemeProvider } from "./theme";
@@ -9,7 +9,7 @@ import { Result } from "./pages/result/result.tsx";
 import { App } from "./App.tsx";
 import { GameBoard } from "./pages/game-board";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: ROUTES.mainPage,
     element: <StartPage />,
