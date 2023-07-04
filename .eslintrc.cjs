@@ -17,13 +17,14 @@ module.exports = {
     "import",
   ],
   rules: {
-    "react-refresh/only-export-components": "warn",
     "import/prefer-default-export": "off",
     "react/function-component-definition": "off",
     "prefer-arrow-functions/prefer-arrow-functions": ["error"],
     "react/jsx-filename-extension": ["error", { extensions: [".tsx", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/extensions": "off",
+    "react/require-default-props": "off",
+    "react-refresh/only-export-components": "off",
   },
   settings: {
     "import/resolver": {
