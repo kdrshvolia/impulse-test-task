@@ -1,5 +1,22 @@
-import { Button } from "./components/Button";
+import { ReactNode, useMemo, useState } from "react";
+import { defaultContextValue, GameContext } from "./gameContext";
 
-const App = () => <Button>Test</Button>;
+interface AppProps {
+  children: ReactNode;
+}
 
-export default App;
+export const App = ({ children }: AppProps) => {
+  const [currentScore, setCurrentScore] = useState(
+    defaultContextValue.currentScore
+  );
+
+  const gameContextValue = useMemo(
+    () => ({ currentScore, setCurrentScore }),
+    [currentScore]
+  );
+  return (
+    <GameContext.Provider value={gameContextValue}>
+      {children}
+    </GameContext.Provider>
+  );
+};

@@ -1,0 +1,268 @@
+{
+  "questions": [
+    {
+      "Value": "500",
+      "QuestionText": "What is the color of the White House?",
+      "Options": [
+        {
+          "Answer": "Pink",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Blue",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "White",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Rainbow",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "1000",
+      "QuestionText": "How many legs does a spider typically have?",
+      "Options": [
+        {
+          "Answer": "100",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "2",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "8",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "4",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "2000",
+      "QuestionText": "What do you call a group of crows?",
+      "Options": [
+        {
+          "Answer": "A flock",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "A murder",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "A gaggle",
+          "IsCorrect": false
+        },
+        {
+          "Answer": " A herd",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "4000",
+      "QuestionText": "What is the capital of Australia?",
+      "Options": [
+        {
+          "Answer": "Sydney",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Melbourne",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Brisbane",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Canberra",
+          "IsCorrect": true
+        }
+      ]
+    },
+    {
+      "Value": "8000",
+      "QuestionText": "What is the world's largest ocean?",
+      "Options": [
+        {
+          "Answer": "Atlantic",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Indian",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Pacific",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Arctic",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "16000",
+      "QuestionText": "Who wrote the \"Game of Thrones\" series of books?",
+      "Options": [
+        {
+          "Answer": "J.K. Rowling",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "George R. R. Martin",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Stephen King",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Suzanne Collins",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "32000",
+      "QuestionText": "What is the square root of 144?",
+      "Options": [
+        {
+          "Answer": "12",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "14",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "16",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "18",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "64000",
+      "QuestionText": "Which planet is known as the \"Red Planet\"?",
+      "Options": [
+        {
+          "Answer": "Venus",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Mars",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Jupiter",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Saturn",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "125000",
+      "QuestionText": "What is the chemical symbol for gold?",
+      "Options": [
+        {
+          "Answer": "Gd",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Go",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Au",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Ag",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "250000",
+      "QuestionText": "Who painted the Mona Lisa?",
+      "Options": [
+        {
+          "Answer": "Vincent Van Gogh",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Pablo Picasso",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Leonardo da Vinci",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Michelangelo",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "500000",
+      "QuestionText": "What is the name of the longest river in the world?",
+      "Options": [
+        {
+          "Answer": "Amazon",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Nile",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Yangtze",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Mississippi",
+          "IsCorrect": false
+        }
+      ]
+    },
+    {
+      "Value": "1000000",
+      "QuestionText": "Who was the first person to walk on the moon?",
+      "Options": [
+        {
+          "Answer": "Buzz Aldrin",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Neil Armstrong",
+          "IsCorrect": true
+        },
+        {
+          "Answer": "Yuri Gagarin",
+          "IsCorrect": false
+        },
+        {
+          "Answer": "Michael Collins",
+          "IsCorrect": false
+        }
+      ]
+    }
+  ]
+}
