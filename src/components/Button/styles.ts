@@ -27,7 +27,7 @@ export const getCorrectStyles = ({ colors }: ThemeType): CSSObject => ({
 export const getHoverStyles = ({ colors }: ThemeType): CSSObject => ({
   backgroundColor: colors.white,
   borderColor: colors.orange100,
-  color: colors.orange100
+  color: colors.orange100,
 });
 
 const buttonStatesMap = {
@@ -42,7 +42,7 @@ const buttonStatesMap = {
 const getStateStyle = (
   theme: ThemeType,
   state: ButtonState,
-  changeState: boolean,
+  changeState: boolean
 ) =>
   changeState ? buttonStatesMap[state](theme) : buttonStatesMap.active(theme);
 
@@ -53,13 +53,16 @@ export const baseButtonStyle = (
   interactive: boolean
 ): CSSObject => ({
   position: "relative",
-  display: "block",
+  display: "flex",
   maxWidth: "400px",
+  width: "100%",
   minWidth: "200px",
-  height: "60px",
+  height: interactive ? "60px" : "40px",
   textAlign: "center",
   fontSize: "15px",
   lineHeight: "60px",
+  alignItems: "center",
+  justifyContent: "center",
   cursor: "pointer",
   pointerEvents: interactive ? "auto" : "none",
   border: `1px solid ${theme.colors.black40}`,
@@ -67,7 +70,7 @@ export const baseButtonStyle = (
   ...getStateStyle(theme, state, changeState),
 
   "&:hover": {
-    borderColor: state === "inactive" ? "unset" : theme.colors.orange100,
+    borderColor: ["unset", theme.colors.orange100],
   },
 
   // "&:before, &:after": {

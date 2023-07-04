@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import _data from "../../data.json";
-import { Button } from "../Button";
 import { css } from "../../css";
-import {
-  boardContainerStyle,
-  optionsListStyle,
-  questionSectionStyle,
-} from "./style.ts";
+import { boardContainerStyle } from "./style.ts";
 import { Level } from "./Level.tsx";
 import { ButtonState } from "../Button/types.ts";
-import { ReactComponent as Burger } from "../../assets/burger.svg";
-import { ReactComponent as Cross } from "../../assets/cross.svg";
-import { OptionType } from "./types.ts";
+import { CurrentQuestion, OptionType } from "./types.ts";
 import { ROUTES } from "../../constants/routes.ts";
-import { useTheme } from "../../theme";
+import { Question } from "./Question.tsx";
 
 export const Board = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentSum, setCurrentSum] = useState(0);
-  const theme = useTheme();
-  const currentQuestionItem = _data.questions[currentQuestionIndex];
+  const currentQuestionItem: CurrentQuestion =
+    _data.questions[currentQuestionIndex];
   const values = _data.questions.map((item) => item.Value);
   const [buttonState, setButtonState] = useState<ButtonState>("active");
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,33 +42,14 @@ export const Board = () => {
 
   return (
     <div className={css(boardContainerStyle)}>
-      <div className={css(questionSectionStyle(theme))}>
-        <div
-          className={css({
-            position: "relative",
-            zIndex: 2,
-            display: ["block", "none"],
-          })}
-        >
-          {menuOpen ? (
-            <Cross onClick={() => setMenuOpen(false)} />
-          ) : (
-            <Burger onClick={() => setMenuOpen(true)} />
-          )}
-        </div>
-        <h2>{currentQuestionItem.QuestionText}</h2>
-        <ul className={css(optionsListStyle)}>
-          {currentQuestionItem.Options.map((item, index) => (
-            <Button
-              changeState={index === activeIndex}
-              state={buttonState}
-              onClick={() => handleOptionButtonClick(item, index)}
-            >
-              {item.Answer}
-            </Button>
-          ))}
-        </ul>
-      </div>
+      <Question
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        currentQuestionItem={currentQuestionItem}
+        handleOptionButtonClick={handleOptionButtonClick}
+        activeIndex={activeIndex}
+        buttonState={buttonState}
+      />
       <Level
         options={values}
         currentIndex={currentQuestionIndex}

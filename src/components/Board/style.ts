@@ -3,6 +3,10 @@ import { ThemeType } from "../../theme";
 
 export const boardContainerStyle: CSSObject = {
   display: "flex",
+  position: "relative",
+  overflow: "hidden",
+  height: "100%",
+  minHeight: "100%",
 };
 
 export const questionSectionStyle = ({ colors }: ThemeType): CSSObject => ({
@@ -20,6 +24,7 @@ export const questionSectionStyle = ({ colors }: ThemeType): CSSObject => ({
 export const optionsListStyle: CSSObject = {
   display: "grid",
   gridTemplateColumns: ["1fr", "1fr 1fr"],
+  justifyItems: "center",
   gap: "10px 57px",
 };
 
@@ -39,4 +44,13 @@ export const levelContainerStyle = (
   left: 0,
   transition: "transform 500ms ease-in-out",
   width: "100%",
+  justifyContent: "center",
+  minHeight: "100vh",
 });
+
+export const additionalBar: CSSObject = {
+  position: "relative",
+  zIndex: 2,
+  display: ["flex", "none"],
+  justifyContent: "flex-end",
+};
