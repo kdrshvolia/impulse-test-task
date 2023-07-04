@@ -2,7 +2,7 @@ import { css } from "../../css";
 import { headerStyle } from "./style.ts";
 import { ROUTES } from "../../constants/routes.ts";
 import Hand from "../../assets/hand.svg";
-import { BasePageTemplate } from "../../components/basePageTemplate";
+import { BasePageTemplate } from "../../components/BasePageTemplate";
 
 export const StartPage = () => (
     <BasePageTemplate

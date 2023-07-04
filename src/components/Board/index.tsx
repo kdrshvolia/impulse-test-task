@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import _data from "../../data.json";
 import { css } from "../../css";
@@ -8,10 +8,11 @@ import { ButtonState } from "../Button/types.ts";
 import { CurrentQuestion, OptionType } from "./types.ts";
 import { ROUTES } from "../../constants/routes.ts";
 import { Question } from "./Question.tsx";
+import { GameContext } from "../../gameContext";
 
 export const Board = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [currentSum, setCurrentSum] = useState(0);
+  const { setCurrentScore } = useContext(GameContext);
   const currentQuestionItem: CurrentQuestion =
     _data.questions[currentQuestionIndex];
   const values = _data.questions.map((item) => item.Value);
@@ -21,21 +22,27 @@ export const Board = () => {
 
   const navigate = useNavigate();
 
+  const redirectToResult = () => setTimeout(() => {
+    navigate(ROUTES.resultPage);
+  }, 1500);
+
   const handleOptionButtonClick = (item: OptionType, index: number) => {
     setActiveIndex(index);
     setButtonState("selected");
     setTimeout(() => {
       if (item.IsCorrect) {
         setButtonState("correct");
+        setCurrentScore(Number(currentQuestionItem.Value));
         setTimeout(() => {
           setCurrentQuestionIndex((prev) => prev + 1);
           setButtonState("active");
         }, 1500);
+        if (index >= _data.questions.length) {
+          redirectToResult()
+        }
       } else {
         setButtonState("wrong");
-        setTimeout(() => {
-          navigate(ROUTES.resultPage);
-        }, 1500);
+        redirectToResult();
       }
     }, 1000);
   };

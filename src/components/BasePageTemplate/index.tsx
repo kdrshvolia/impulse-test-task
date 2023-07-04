@@ -13,6 +13,7 @@ interface BasePageTemplateProps {
   linkHref: string;
   rightColumnContent: ReactNode;
   linkText: string;
+  onLinkClick?: () => void;
 }
 
 export const BasePageTemplate = ({
@@ -20,6 +21,7 @@ export const BasePageTemplate = ({
   linkHref,
   rightColumnContent,
   linkText,
+  onLinkClick,
 }: BasePageTemplateProps) => {
   const theme = useTheme();
   return (
@@ -37,7 +39,7 @@ export const BasePageTemplate = ({
         />
         <div className={css(rightColumnStyle)}>
           {rightColumnContent}
-          <StyledLink to={linkHref} text={linkText} />
+          <StyledLink to={linkHref} text={linkText} onClick={onLinkClick} />
         </div>
       </div>
     </div>
