@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useMemo, useState } from "react";
 import { defaultContextValue, GameContext } from "./gameContext";
 
 interface AppProps {
@@ -9,8 +9,13 @@ export const App = ({ children }: AppProps) => {
   const [currentScore, setCurrentScore] = useState(
     defaultContextValue.currentScore
   );
+
+  const gameContextValue = useMemo(
+    () => ({ currentScore, setCurrentScore }),
+    [currentScore]
+  );
   return (
-    <GameContext.Provider value={{ currentScore, setCurrentScore }}>
+    <GameContext.Provider value={gameContextValue}>
       {children}
     </GameContext.Provider>
   );
