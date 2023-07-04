@@ -24,6 +24,7 @@ module.exports = {
     "react/jsx-filename-extension": ["error", { extensions: [".tsx", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/extensions": "off",
+    "react/require-default-props": "off"
   },
   settings: {
     "import/resolver": {
